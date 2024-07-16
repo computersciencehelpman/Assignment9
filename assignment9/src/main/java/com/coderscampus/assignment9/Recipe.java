@@ -110,14 +110,33 @@ public class Recipe {
 		this.vegetarian = vegetarian;
 	}
 
-	public Recipe(Boolean dairyFree, Boolean glutenFree, Boolean vegan, Boolean vegetarian) {
-        this.dairyFree = dairyFree;
+	public Recipe(Integer cookingMinutes, boolean dairyFree, boolean glutenFree, String instructions,
+			double preparationMinutes, double pricePerServing, Integer readyInMinutes, Integer servings,
+			 double spoonacularScore, String title, boolean vegan, boolean vegetarian) {
+		
+		this.cookingMinutes = cookingMinutes;
+		this.dairyFree = dairyFree;
         this.glutenFree = glutenFree;
+        this.instructions = instructions;
+        this.preparationMinutes = preparationMinutes;
+        this.readyInMinutes = readyInMinutes;
+         this.pricePerServing = pricePerServing;
+        this.servings = servings;
+        this.spoonacularScore = spoonacularScore;
+        this.title = title;
         this.vegan = vegan;
         this.vegetarian = vegetarian;
-    }
-    
-    
+	}
+
+	@Override
+	    public String toString() {
+	        return "Recipe [Cooking Minutes=" + cookingMinutes + ", dairyFree=" + dairyFree + 
+	        		", glutenFree=" + glutenFree + " , instructions" + instructions 
+	        		+ ", preparation minutes=" + preparationMinutes + 
+	        		"readyInMinutes=" + readyInMinutes + ", pricePerServing=" + pricePerServing + 
+	        		"servings="+servings+ ", spoonacularScore=" + spoonacularScore+ "title=" + title +
+	        		" , vegan=" + vegan +  ", vegetarian=" + vegetarian + "]";
+	    }
 
    
     
